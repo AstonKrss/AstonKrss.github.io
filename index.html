@@ -74,7 +74,7 @@
             <p><strong>✋ 张开手掌：</strong> 散开照片 + 手掌移动控制旋转</p>
             <p><strong>✌️ 比“V”：</strong> 切换主题</p>
             <p><strong>👆 伸食指：</strong> 逐张查看照片</p>
-            <p><strong>✉️ 点击“上传书信”：</strong> 查看或修改信件</p>
+            <p><strong>中指查看信！✉️</strong> 查看或修改信件</p>
         </div>
         <button id="btn-skip-tutorial">跳过</button>
     </div>
@@ -142,7 +142,7 @@
             rotation: { x: 0, y: 0 }, spinVel: { x: 0, y: 0 }, time: 0,
             wasPointing: false, palmCenter: { x: 0.5, y: 0.5 }, hasPalmCenter: false,
             starMesh: null, starHaloMesh: null,
-            letterContent: "除氧器，\n圣诞节快乐，\n虽然它有点昙花一现\n但是我确实做了九小时\n希望你喜欢这个小惊喜！\n—— 来自你的秘密圣诞老人",
+            letterContent: "\n\n\n\n除氧器，\n圣诞节快乐，\n虽然它有点昙花一现\n但是我确实做了九小时\n希望你喜欢这个小惊喜！\n—— 来自你的秘密圣诞老人",
             letterTyper: null, letterStartTimer: null, letterLastTriggerTime: 0,
             musicData: null
         };
@@ -176,13 +176,15 @@
         function loadPredefinedPhotos() {
             const photoUrls = [
                 "photos/2024_06_1.jpg", "photos/2024_07_1.jpg", "photos/2024_07_2.jpg",
-                "photos/2024_12_2.jpg", "photos/2025_01_1.jpg",
+                "photos/2024_12_2.jpg", "photos/2025_01_1.jpg","photos/2025_12_19.jpg",
                 "photos/2025_01_2.jpg", "photos/2025_01_3.jpg", "photos/2025_01_4.jpg",
                 "photos/2025_01_5.jpg", "photos/2025_01_6.jpg", "photos/2025_01_7.jpg",
                 "photos/2025_02_1.jpg", "photos/2025_05_1.jpg", "photos/2025_06_1.jpg",
                 "photos/2025_06_2.jpg", "photos/2025_06_3.jpg", "photos/2025_09_1.jpg",
                 "photos/2025_10_1.jpg", "photos/2025_10_2.jpg", "photos/2025_11_1.jpg",
-                "photos/2025_11_2.jpg", "photos/2024_12_14.jpg", "photos/2025_12_13.jpg"
+                "photos/2025_11_2.jpg", "photos/2024_12_14.jpg", "photos/2025_12_13.jpg",
+                "photos/2025_12_18.jpg","photos/2025_12_17.jpg","photos/2025_12_20.jpg"
+                ,"photos/2025_12_22.jpg","photos/2025_12_21.jpg"
             ];
             const loader = new THREE.TextureLoader();
             photoUrls.forEach(url => {
